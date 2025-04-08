@@ -11,6 +11,13 @@ public interface BasicMath {
      */
     <N extends Number> void add(N value);
 
+    /**
+     * Subtracts a value from the calculator.
+     * @param <N> Generic numeric type (N)
+     * @param value is the value to subtract.
+     */
+    <N extends Number> void subtract(N value);
+
 }
 
 
