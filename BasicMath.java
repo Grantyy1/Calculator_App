@@ -31,7 +31,7 @@ public interface BasicMath {
      * @param value this is the value used to divide by.
      */
     <N extends Number> void divide(N value);
-
+//
 }
 
 
