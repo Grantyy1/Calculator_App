@@ -25,6 +25,13 @@ public interface BasicMath {
      */
     <N extends Number> void multiply(N value);
 
+    /**
+     * Divides the calculators value by another inputted value.
+     * @param <N> Generic numeric type
+     * @param value this is the value used to divide by.
+     */
+    <N extends Number> void divide(N value);
+
 }
 
 
