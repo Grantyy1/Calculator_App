@@ -17,7 +17,7 @@ public interface BasicMath {
      * @param value is the value to subtract.
      */
     <N extends Number> void subtract(N value);
-
+//
 }
 
 
