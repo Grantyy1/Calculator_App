@@ -17,7 +17,14 @@ public interface BasicMath {
      * @param value is the value to subtract.
      */
     <N extends Number> void subtract(N value);
-//
+
+    /**
+     * Multiplies the calculators value by another inputted value.
+     * @param <N> Generic numeric type (N)
+     * @param value is the value to multiply by.
+     */
+    <N extends Number> void multiply(N value);
+
 }
 
 
