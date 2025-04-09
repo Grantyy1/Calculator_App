@@ -19,5 +19,12 @@ public abstract class Calculator implements BasicMath {
         System.out.println("Calculator On");
     }
 
+    @Override
+    public <N extends Number> void add(N value) {
+        System.out.println("+" + value);
+        System.out.println("============");
+        this.value += value.doubleValue();
+        updateDisplay();
+    }
 
 }
