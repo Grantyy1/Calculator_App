@@ -1,3 +1,9 @@
+/**
+ * Calculator that implements the BasicMath interface
+ * @author Grant Peverett
+ * @see <a href="https://github.com/Grantyy1/Calculator_App">GitHub Repository</a>
+ */
+
 public abstract class Calculator implements BasicMath {
 
     /**
@@ -11,7 +17,7 @@ public abstract class Calculator implements BasicMath {
     protected int precision;
 
     /**
-     * Constructor used for Calculator class
+     * Constructor used for Calculator class.
      */
     public Calculator() {
         this.value = 0.0;
@@ -19,6 +25,11 @@ public abstract class Calculator implements BasicMath {
         System.out.println("Calculator On");
     }
 
+    /**
+     * Adds the value to the calculator.
+     * @param value is the value to be added.
+     * @param <N> is the generic value.
+     */
     @Override
     public <N extends Number> void add(N value) {
         System.out.println("+" + value);
@@ -27,6 +38,11 @@ public abstract class Calculator implements BasicMath {
         updateDisplay();
     }
 
+    /**
+     * Subtracts the value to the calculator.
+     * @param value is the value to subtract.
+     * @param <N> is the generic type value.
+     */
     @Override
     public <N extends Number> void subtract(N value) {
         System.out.println("-" + value);
