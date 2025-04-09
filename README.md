@@ -1,7 +1,7 @@
-# Pet_Store_App
+# Calculator App
 
 ## Introduction
-This Java application manages a pet store's inventory with a user-friendly interface. It allows users to add, delete, and display inventory items, as well as save and load inventory from text files.
+This Java application allowes a user to do mathematical calulations. This calculator has the ability to multiply, divide, add, subtract, power and square root.
 
 ---
 
@@ -16,27 +16,21 @@ This Java application manages a pet store's inventory with a user-friendly inter
 --- 
 ## Features
 
-### Inventory Addition:
+### Calculator Memory:
       - Users can add new pets to the inventory with their details
 
-### Inventory Deletion 
+### Basic Mathematics 
       - Users can remove pets from the inventory
       
-### User-Friendly Interface: 
+### Advanced mathematics: 
       - Simple console menu for navigating application features.
       
-### Data Persistence 
+### Precision
       - The inventory can be saved to and loaded from text file.
-      
-### Categorization 
-      - Pets are categorized using enum types (HabitatType, WaterType, etc.)
-      
-### Optional Inventory Update 
-    - Mentioned as an extra credit feature, allowing modifications to existing inventory items
 
-## Console Code for App
+## Console Code for the App
 
-**Pet_Store_App**
+**Calculator App**
 
 ├── **Input.java**        # Class representing the Users Input
 
@@ -49,7 +43,7 @@ This Java application manages a pet store's inventory with a user-friendly inter
 ---
 
 ## Project Structure
-The application is divided into two main packages:
+Project is divided into 2 interfaced and 4 classes:
 
 ## petstore.inventory: Contains classes and enums for pet inventory data
 
