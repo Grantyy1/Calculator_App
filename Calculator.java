@@ -51,6 +51,11 @@ public abstract class Calculator implements BasicMath {
         updateDisplay();
     }
 
+    /**
+     * Multiplies the calculators number by another number.
+     * @param value is the value to multiply by.
+     * @param <N> the generic type value
+     */
     @Override
     public <N extends Number> void multiply(N value) {
         System.out.println("*" + value);
@@ -59,6 +64,12 @@ public abstract class Calculator implements BasicMath {
         updateDisplay();
     }
 
+    /**
+     * Divides the calculators value by another value.
+     * Cannot divide a number by 0.
+     * @param value this is the value used to divide by.
+     * @param <N> this is the generic type value used.
+     */
     @Override
     public <N extends Number> void divide(N value) {
         System.out.println("/" + value);
