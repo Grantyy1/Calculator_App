@@ -101,11 +101,18 @@ public abstract class Calculator implements BasicMath {
             System.out.println(String.format(format, value));
     }
 
-
+    /**
+     * Gets the current value from the user.
+     * @return the calculators current value.
+     */
     public double getValue() {
-        return this.value; ///
+        return this.value;
     }
 
+    /**
+     * Sets the value to the calculator.
+     * @param value This is the new value set.
+     */
     public void setValue(double value) {
         this.value = value;
     }
