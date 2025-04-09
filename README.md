@@ -1,4 +1,4 @@
-# Calculator App
+# Calculator App :fax:
 
 ## Introduction
 This Java application allowes a user to do mathematical calulations. This calculator has the ability to multiply, divide, add, subtract, power and square root.
