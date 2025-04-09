@@ -27,4 +27,12 @@ public abstract class Calculator implements BasicMath {
         updateDisplay();
     }
 
+    @Override
+    public <N extends Number> void subtract(N value) {
+        System.out.println("-" + value);
+        System.out.println("============");
+        this.value -= value.doubleValue();
+        updateDisplay();
+    }
+
 }
