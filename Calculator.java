@@ -51,4 +51,41 @@ public abstract class Calculator implements BasicMath {
         updateDisplay();
     }
 
+    @Override
+    public <N extends Number> void multiply(N value) {
+        System.out.println("*" + value);
+        System.out.println("============");
+        this.value *= value.doubleValue();
+        updateDisplay();
+    }
+
+    @Override
+    public <N extends Number> void divide(N value) {
+        System.out.println("/" + value);
+        System.out.println("============");
+        this.value /= value.doubleValue();
+        updateDisplay();
+
+        if(value.doubleValue() == 0) {
+            System.out.println("Error: Not divisible by Zero");
+        return;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
