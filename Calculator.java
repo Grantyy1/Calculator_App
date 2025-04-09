@@ -100,6 +100,15 @@ public abstract class Calculator implements BasicMath {
             String format = "%." + precision + "f";
             System.out.println(String.format(format, value));
     }
+
+
+    public double getValue() {
+        return this.value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
 }
 
 
