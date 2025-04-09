@@ -103,7 +103,7 @@ public abstract class Calculator implements BasicMath {
 
 
     public double getValue() {
-        return this.value;
+        return this.value; ///
     }
 
     public void setValue(double value) {
