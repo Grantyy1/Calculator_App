@@ -83,6 +83,17 @@ public abstract class Calculator implements BasicMath {
         }
     }
 
+    @Override
+    public void clear() {
+        this.value = 0.0;
+        System.out.println("Calculator Cleared");
+    }
+
+    @Override
+    public void updateDisplay() {
+            String format = "%." + precision + "f";
+            System.out.println(String.format(format, value));
+    }
 }
 
 
