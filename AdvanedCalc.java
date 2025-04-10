@@ -72,4 +72,17 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         String format = "%,." + precision + "f%n";
         System.out.printf(format, this.currentValue);
     }
+
+    /**
+     * Displays teh memory value with the current precision set.
+     */
+    @Override
+    public void displayMemoryValue() {
+        String format = "%,." + precision + "f%n";
+        System.out.printf(format, this.currentValue);
+    }
+
+
+
+
 }
