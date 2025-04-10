@@ -43,4 +43,20 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         this.currentValue = Math.pow(this.currentValue, exp);
         updateDisplay();
     }
+
+    /**
+     * Calculates the square root of the current value in the calculator.
+     */
+    @Override
+    public void sqrt() {
+        if (this.currentValue < 0) {
+            System.out.println("Error: Cannot calculate square root of a negative number");
+            return;
+        }
+        String format = "%,." + precision + "f";
+        System.out.println("√ " + String.format(format, this.currentValue));
+        System.out.println("=============");
+        previousValue = currentValue;
+        this.currentValue = Math.sqrt(this.currentValue);
+        updateDisplay();
 }
