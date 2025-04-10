@@ -19,4 +19,18 @@ public class MemoryCalc extends Calculator {
         this.memoryValue = 0.0;
     }
 
+    /**
+     * Displays the value in the calculators memory.
+     */
+    public void displayMemoryValue() {
+        System.out.println(formatValue(this.memoryValue));
+    }
+
+    /**
+     * Clears the calculator's memory and sets it to 0.
+     */
+    public void memoryClear() {
+        this.memoryValue = 0.0;
+        System.out.println("Memory Cleared " + formatValue(this.memoryValue));
+    }
 }
