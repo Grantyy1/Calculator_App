@@ -1,5 +1,5 @@
 /**
- * Calculator that implements the BasicMath interface
+ * Calculator that implements the BasicMath interface.
  * @author Grant Peverett
  * @see <a href="https://github.com/Grantyy1/Calculator_App">GitHub Repository</a>
  */
@@ -7,27 +7,27 @@
 public abstract class Calculator implements BasicMath {
 
     /**
-     *
+     * Is the previous value on the calculator.
      */
     protected double previousValue;
 
     /**
-     *
+     *The value inputted by the user into the calculator.
      */
     protected double inputValue;
 
     /**
-     *
+     *The current value on the calculator.
      */
     protected double currentValue;
 
     /**
-     *
+     *The operator being used for the calculation.
      */
     protected char operator;
 
     /**
-     * Constructor for Calculator
+     * Constructor for Calculator.
      */
     public Calculator() {
         this.previousValue = 0.0;
@@ -38,9 +38,9 @@ public abstract class Calculator implements BasicMath {
     }
 
     /**
-     * Add a number to the current value
-     * @param <N> Generic numeric type
-     * @param value The number to add
+     * Adds a number to the current value.
+     * @param <N> Generic numeric type.
+     * @param value the value to add to the other value.
      */
     @Override
     public <N extends Number> void add(N value) {
@@ -54,9 +54,9 @@ public abstract class Calculator implements BasicMath {
     }
 
     /**
-     * Subtract a number from the current value
-     * @param <N> Generic numeric type
-     * @param value The number to subtract
+     * Subtracts a number from the current value.
+     * @param <N> Generic numeric type.
+     * @param value the value to subtract from the current number.
      */
     @Override
     public <N extends Number> void subtract(N value) {
@@ -70,9 +70,9 @@ public abstract class Calculator implements BasicMath {
     }
 
     /**
-     * Multiply the current value by a number
-     * @param <N> Generic numeric type
-     * @param value The number to multiply by
+     * Multiplies the current value by a number.
+     * @param <N> Generic numeric type.
+     * @param value the value used to multiply by.
      */
     @Override
     public <N extends Number> void multiply(N value) {
@@ -86,9 +86,9 @@ public abstract class Calculator implements BasicMath {
         }
 
     /**
-     * Divides the current value by a number
-     * @param <N> Generic numeric type
-     * @param value The number to divide by
+     * Divides the current value by a number.
+     * @param <N> Generic numeric type.
+     * @param value the values used to divide by.
      */
     @Override
     public <N extends Number> void divide(N value) {
@@ -106,7 +106,7 @@ public abstract class Calculator implements BasicMath {
     }
 
     /**
-     * Clear the calculator, resetting all numeric fields to zero
+     * Clear the calculator, resetting current value to 0.
      */
     public void clear() {
         this.previousValue = 0.0;
@@ -117,7 +117,7 @@ public abstract class Calculator implements BasicMath {
     }
 
     /**
-     * Update the display with the current value
+     * Updates the display with the current value on the calculator.
      */
     public void updateDisplay() {
         System.out.printf("%.2f%n", this.currentValue);
