@@ -6,117 +6,108 @@
 
 public abstract class Calculator implements BasicMath {
 
-    /**
-     * Field stores the actual numeric value with arbitrary precision.
-     */
-    protected double value;
+        protected double previousValue;
+        protected double inputValue;
+        protected double currentValue;
+        protected char operator;
 
-    /**
-     * Represents the number of decimal places to be considered significant.
-     */
-    protected int precision;
+        /**
+         * Constructor for Calculator
+         */
+        public Calculator() {
+            this.previousValue = 0.0;
+            this.inputValue = 0.0;
+            this.currentValue = 0.0;
+            this.operator = ' ';
+            System.out.println("Calculator On");
+        }
 
-    /**
-     * Constructor used for Calculator class.
-     */
-    public Calculator() {
-        this.value = 0.0;
-        this.precision = 2; // Default precision is 2 decimal places
-        System.out.println("Calculator On");
-    }
+        /**
+         * Add a number to the current value
+         * @param <N> Generic numeric type
+         * @param value The number to add
+         */
+        @Override
+        public <N extends Number> void add(N value) {
+            inputValue = value.doubleValue();
+            System.out.println("+ " + inputValue);
+            System.out.println("=============");
+            currentValue += inputValue;
+            previousValue = currentValue - inputValue;
+            operator = '+';
+            updateDisplay();
+        }
 
-    /**
-     * Adds the value to the calculator.
-     * @param value is the value to be added.
-     * @param <N> is the generic value.
-     */
-    @Override
-    public <N extends Number> void add(N value) {
-        System.out.println("+" + value);
-        System.out.println("============");
-        this.value += value.doubleValue();
-        updateDisplay();
-    }
+        /**
+         * Subtract a number from the current value
+         * @param <N> Generic numeric type
+         * @param value The number to subtract
+         */
+        @Override
+        public <N extends Number> void subtract(N value) {
+            inputValue = value.doubleValue();
+            System.out.println("- " + inputValue);
+            System.out.println("=============");
+            currentValue -= inputValue;
+            previousValue = currentValue + inputValue;
+            operator = '-';
+            updateDisplay();
+        }
 
-    /**
-     * Subtracts the value to the calculator.
-     * @param value is the value to subtract.
-     * @param <N> is the generic type value.
-     */
-    @Override
-    public <N extends Number> void subtract(N value) {
-        System.out.println("-" + value);
-        System.out.println("============");
-        this.value -= value.doubleValue();
-        updateDisplay();
-    }
+        /**
+         * Multiply the current value by a number
+         * @param <N> Generic numeric type
+         * @param value The number to multiply by
+         */
+        @Override
+        public <N extends Number> void multiply(N value) {
+            inputValue = value.doubleValue();
+            System.out.println("* " + inputValue);
+            System.out.println("=============");
+            previousValue = currentValue;
+            currentValue *= inputValue;
+            operator = '*';
+            updateDisplay();
+        }
 
-    /**
-     * Multiplies the calculators number by another number.
-     * @param value is the value to multiply by.
-     * @param <N> the generic type value
-     */
-    @Override
-    public <N extends Number> void multiply(N value) {
-        System.out.println("*" + value);
-        System.out.println("============");
-        this.value *= value.doubleValue();
-        updateDisplay();
-    }
+        /**
+         * Divide the current value by a number
+         * @param <N> Generic numeric type
+         * @param value The number to divide by
+         */
+        @Override
+        public <N extends Number> void divide(N value) {
+            inputValue = value.doubleValue();
+            if (inputValue == 0) {
+                System.out.println("Error: Division by zero");
+                return;
+            }
+            System.out.println("/ " + inputValue);
+            System.out.println("=============");
+            previousValue = currentValue;
+            currentValue /= inputValue;
+            operator = '/';
+            updateDisplay();
+        }
 
-    /**
-     * Divides the calculators value by another value.
-     * Cannot divide a number by 0.
-     * @param value this is the value used to divide by.
-     * @param <N> this is the generic type value used.
-     */
-    @Override
-    public <N extends Number> void divide(N value) {
-        System.out.println("/" + value);
-        System.out.println("============");
-        this.value /= value.doubleValue();
-        updateDisplay();
+        /**
+         * Clear the calculator, resetting all numeric fields to zero
+         */
+        public void clear() {
+            this.previousValue = 0.0;
+            this.inputValue = 0.0;
+            this.currentValue = 0.0;
+            this.operator = ' ';
+            System.out.println("Calculator Cleared");
+        }
 
-        if(value.doubleValue() == 0) {
-            System.out.println("Error: Not divisible by Zero");
-        return;
+        /**
+         * Update the display with the current value
+         */
+        public void updateDisplay() {
+            System.out.printf("%.2f%n", this.currentValue);
         }
     }
-
-    /**
-     * Clears the calculator.
-     */
-    @Override
-    public void clear() {
-        this.value = 0.0;
-        System.out.println("Calculator Cleared");
-    }
-
-    /**
-     * Updated the calculators display with the current value.
-     */
-    @Override
-    public void updateDisplay() {
-            String format = "%." + precision + "f";
-            System.out.println(String.format(format, value));
-    }
-
-    /**
-     * Gets the current value from the user.
-     * @return the calculators current value.
-     */
-    public double getValue() {
-        return this.value;
-    }
-
-    /**
-     * Sets the value to the calculator.
-     * @param value This is the new value set.
-     */
-    public void setValue(double value) {
-        this.value = value;
-    }
-}
 
 
 

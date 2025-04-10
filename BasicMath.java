@@ -32,15 +32,6 @@ public interface BasicMath {
      */
     <N extends Number> void divide(N value);
 
-    /**
-     * Clears all numeric fields.
-     */
-    void clear();
-
-    /**
-     * Updates the display
-     */
-    void updateDisplay();
 
 }
 
