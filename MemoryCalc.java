@@ -23,7 +23,7 @@ public class MemoryCalc extends Calculator {
      * Displays the value in the calculators memory.
      */
     public void displayMemoryValue() {
-        System.out.println(formatValue(this.memoryValue));
+        System.out.println(this.memoryValue);
     }
 
     /**
@@ -31,6 +31,6 @@ public class MemoryCalc extends Calculator {
      */
     public void memoryClear() {
         this.memoryValue = 0.0;
-        System.out.println("Memory Cleared " + formatValue(this.memoryValue));
+        System.out.println("Memory Cleared " + String.format("%.4f", this.memoryValue));
     }
 }
