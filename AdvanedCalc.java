@@ -5,7 +5,16 @@
  */
 
 
-public class AdvanedCalc {
+public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
 
+    private int precision;
 
+    /**
+     * Constructor for AdvanceCalc
+     */
+    public AdvanceCalc() {
+        super();
+        this.precision = 2;
+        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
+    }
 }
