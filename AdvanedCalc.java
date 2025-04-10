@@ -10,11 +10,22 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     private int precision;
 
     /**
-     * Constructor for AdvanceCalc
+     * Constructor for the AdvanceCalc class.
      */
     public AdvanceCalc() {
         super();
         this.precision = 2;
+        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
+    }
+
+    /**
+     * Sets the decimal place precision for displaying the results.
+     * @param places The number of decimal places to display (0-10)
+     */
+    public void setPrecision(int places) {
+        if (places < 0) places = 0;
+        if (places > 10) places = 10;
+        this.precision = places;
         System.out.println("Calculator Precision is " + this.precision + " decimal places.");
     }
 }
