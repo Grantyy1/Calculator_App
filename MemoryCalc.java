@@ -49,4 +49,12 @@ public class MemoryCalc extends Calculator {
     public double getMemoryValue() {
         return this.memoryValue;
     }
+
+    /**
+     * Adds the current value to the calculator's memory.
+     */
+    public void memoryAdd() {
+        this.memoryValue += this.currentValue;
+        System.out.println("Memory Added " +  this.memoryValue);
+    }
 }
