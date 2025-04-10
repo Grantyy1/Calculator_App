@@ -20,6 +20,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
 
     /**
      * Sets the decimal place precision for displaying the results.
+     *
      * @param places The number of decimal places to display (0-10)
      */
     public void setPrecision(int places) {
@@ -29,8 +30,10 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         System.out.println("Calculator Precision is " + this.precision + " decimal places.");
     }
 
-     /** Calculate the power of the current value raised to the given exponent
-     * @param <N> Generic numeric type
+    /**
+     * Calculate the power of the current value raised to the given exponent
+     *
+     * @param <N>   Generic numeric type
      * @param value The exponent to raise the current value to
      */
     @Override
@@ -59,4 +62,14 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         previousValue = currentValue;
         this.currentValue = Math.sqrt(this.currentValue);
         updateDisplay();
+    }
+
+    /**
+     * Updates the display with the current value, and uses the set precision.
+     */
+    @Override
+    public void updateDisplay() {
+        String format = "%,." + precision + "f%n";
+        System.out.printf(format, this.currentValue);
+    }
 }
