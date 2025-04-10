@@ -20,7 +20,7 @@ public class MemoryCalc extends Calculator {
     }
 
     /**
-     * Displays the value in the calculators memory.
+     * Displays the value in the calculator's memory.
      */
     public void displayMemoryValue() {
         System.out.println(this.memoryValue);
@@ -32,5 +32,21 @@ public class MemoryCalc extends Calculator {
     public void memoryClear() {
         this.memoryValue = 0.0;
         System.out.println("Memory Cleared " + String.format("%.4f", this.memoryValue));
+    }
+
+    /**
+     * Subtracts the current value from the calculator's memory.
+     */
+    public void memorySubtract() {
+        this.memoryValue -= this.currentValue;
+        System.out.println("Memory Subtracted " +  (-this.memoryValue));
+    }
+
+    /**
+     * Gets the value stored in the memory.
+     * @return the memory value.
+     */
+    public double getMemoryValue() {
+        return this.memoryValue;
     }
 }
