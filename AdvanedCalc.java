@@ -28,4 +28,19 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         this.precision = places;
         System.out.println("Calculator Precision is " + this.precision + " decimal places.");
     }
+
+     /** Calculate the power of the current value raised to the given exponent
+     * @param <N> Generic numeric type
+     * @param value The exponent to raise the current value to
+     */
+    @Override
+    public <N extends Number> void pow(N value) {
+        double exp = value.doubleValue();
+        String format = "%,." + precision + "f";
+        System.out.println("^ " + String.format(format, exp));
+        System.out.println("=============");
+        previousValue = currentValue;
+        this.currentValue = Math.pow(this.currentValue, exp);
+        updateDisplay();
+    }
 }
