@@ -4,7 +4,6 @@
  * @see <a href="https://github.com/Grantyy1/Calculator_App">GitHub Repository</a>
  */
 
-
 public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
 
     private int precision;
