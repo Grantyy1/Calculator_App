@@ -1,3 +1,4 @@
+
 /**
  * Calculator that implements the BasicMath interface.
  * @author Grant Peverett
@@ -46,7 +47,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void add(N value) {
         inputValue = value.doubleValue();
-        System.out.println("+ \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
+        System.out.println("+ " + String.format("%7.2f", inputValue).replace('.', ','));
         System.out.println("=============");
         currentValue += inputValue;
         previousValue = currentValue - inputValue;
@@ -62,7 +63,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void subtract(N value) {
         inputValue = value.doubleValue();
-        System.out.println("- \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
+        System.out.println("- " + String.format("%7.2f", inputValue).replace('.', ','));
         System.out.println("=============");
         currentValue -= inputValue;
         previousValue = currentValue + inputValue;
@@ -78,7 +79,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void multiply(N value) {
         inputValue = value.doubleValue();
-        System.out.println("* \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
+        System.out.println("* " + String.format("%10.2f", inputValue));
         System.out.println("=============");
         previousValue = currentValue;
         currentValue *= inputValue;
@@ -99,7 +100,7 @@ public abstract class Calculator implements BasicMath {
             return;
         }
 
-        System.out.println("/ \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
+        System.out.println("/ " + String.format("%10.2f", inputValue));
         System.out.println("=============");
         previousValue = currentValue;
         currentValue /= inputValue;
@@ -122,7 +123,7 @@ public abstract class Calculator implements BasicMath {
      * Updates the display with the current value on the calculator.
      */
     public void updateDisplay() {
-        System.out.println("\u001B[34m" + String.format("%12.2f", this.currentValue) + "\u001B[0m");
+        System.out.println(String.format("%12.2f", this.currentValue));
     }
 }
 
