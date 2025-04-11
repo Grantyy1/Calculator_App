@@ -35,7 +35,6 @@ public abstract class Calculator implements BasicMath {
         this.currentValue = 0.0;
         this.operator = ' ';
         System.out.println("Calculator On");
-        System.out.println(); // Add empty line for spacing
     }
 
     /**
@@ -53,7 +52,7 @@ public abstract class Calculator implements BasicMath {
         currentValue += inputValue;
         operator = '+';
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -70,7 +69,7 @@ public abstract class Calculator implements BasicMath {
         currentValue -= inputValue;
         operator = '-';
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -87,7 +86,7 @@ public abstract class Calculator implements BasicMath {
         currentValue *= inputValue;
         operator = '*';
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -109,7 +108,7 @@ public abstract class Calculator implements BasicMath {
         currentValue /= inputValue;
         operator = '/';
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -121,7 +120,7 @@ public abstract class Calculator implements BasicMath {
         this.currentValue = 0.0;
         this.operator = ' ';
         System.out.println("Calculator Cleared");
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**

@@ -61,7 +61,7 @@ public class MemoryCalc extends Calculator {
     public void memoryAdd() {
         this.memoryValue += this.currentValue;
         System.out.print("Memory Add");
-        System.out.println(String.format("%11.2f", this.currentValue));
+        System.out.println(String.format("%16.2f", this.currentValue));
         System.out.println(); // Add empty line for spacing
     }
 }

@@ -15,7 +15,6 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         super();
         this.precision = 2;
         System.out.println("Calculator Precision is 2 decimal places.");
-        System.out.println(); // Add empty line for spacing
     }
 
     /**
