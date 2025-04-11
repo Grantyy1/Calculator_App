@@ -101,33 +101,33 @@ This Java application allowes a user to do mathematical calulations. This calcul
       Project is divided into 2 interfaces and 4 classes:
       
 # Interfaces:
-BasicMath.java: Defines basic arithmetic operations
+      BasicMath.java: Defines basic arithmetic operations
       - add()
       - subtract()
       - multiply()
       - divide()
-AdvanceMath.java: Defines advanced mathematical operations
+      AdvanceMath.java: Defines advanced mathematical operations
       - pow()
       - sqrt()
 
 # Classes:
-Calculator.java: Abstract base class implementing BasicMath
-      - Handles basic operations and display functionality
-      - Maintains current and previous values
-      - Provides clear functionality
+      Calculator.java: Abstract base class implementing BasicMath
+            - Handles basic operations and display functionality
+            - Maintains current and previous values
+            - Provides clear functionality
 
-MemoryCalc.java: Extends Calculator
-      - Adds memory storage functionality
-      - Methods for memory operations (add, subtract, clear, display)
+      MemoryCalc.java: Extends Calculator
+            - Adds memory storage functionality
+            - Methods for memory operations (add, subtract, clear, display)
 
-AdvanceCalc.java: Extends MemoryCalc and implements AdvanceMath
-      - Adds advanced mathematical operations
-      - Customizable decimal precision
-      - Enhanced display formatting
+      AdvanceCalc.java: Extends MemoryCalc and implements AdvanceMath
+            - Adds advanced mathematical operations
+            - Customizable decimal precision
+            - Enhanced display formatting
 
-TestBench.java: Main application class
-      - Demonstrates calculator functionality
-      - Tests various operations in sequence
+      TestBench.java: Main application class
+            - Demonstrates calculator functionality
+            - Tests various operations in sequence
 
 ---
 ## Class Diagram
