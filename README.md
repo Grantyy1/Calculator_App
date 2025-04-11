@@ -146,7 +146,7 @@ This Java application allowes a user to do mathematical calulations. This calcul
 ## Class Diagram
       - A UML class diagram is included in this repository.
       
-<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/PetStoreUML.jpg" alt="Profile Picture" /> 
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/Calculator_App%20UML%20Diagram.jpg" alt="Profile Picture" /> 
       
 --- 
 
