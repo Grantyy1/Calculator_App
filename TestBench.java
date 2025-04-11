@@ -17,7 +17,7 @@ public class TestBench {
 
         calc.memoryAdd();
 
-        System.out.println(calc.currentValue);
+        System.out.println("\t" + calc.currentValue);
 
         calc.multiply(10.0);
         calc.memorySubtract();

@@ -42,16 +42,18 @@ public abstract class Calculator implements BasicMath {
      * @param <N> Generic numeric type.
      * @param value the value to add to the other value.
      */
+
     @Override
     public <N extends Number> void add(N value) {
         inputValue = value.doubleValue();
-        System.out.println("+ " + inputValue);
+        System.out.printf("+ %10.2f%n", inputValue);
         System.out.println("=============");
         currentValue += inputValue;
         previousValue = currentValue - inputValue;
         operator = '+';
         updateDisplay();
     }
+
 
     /**
      * Subtracts a number from the current value.
@@ -61,7 +63,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void subtract(N value) {
         inputValue = value.doubleValue();
-        System.out.println("- " + inputValue);
+        System.out.printf("- %10.2f%n", inputValue);
         System.out.println("=============");
         currentValue -= inputValue;
         previousValue = currentValue + inputValue;
@@ -77,7 +79,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void multiply(N value) {
         inputValue = value.doubleValue();
-        System.out.println("* " + inputValue);
+        System.out.printf("* %10.2f%n", inputValue);
         System.out.println("=============");
         previousValue = currentValue;
         currentValue *= inputValue;
@@ -97,7 +99,7 @@ public abstract class Calculator implements BasicMath {
             System.out.println("Error: Division by zero");
             return;
         }
-        System.out.println("/ " + inputValue);
+        System.out.printf("/ %10.2f%n", inputValue);
         System.out.println("=============");
         previousValue = currentValue;
         currentValue /= inputValue;
@@ -120,7 +122,7 @@ public abstract class Calculator implements BasicMath {
      * Updates the display with the current value on the calculator.
      */
     public void updateDisplay() {
-        System.out.printf("%.2f%n", this.currentValue);
+        System.out.printf("%12.2f%n", this.currentValue);
     }
 }
 
