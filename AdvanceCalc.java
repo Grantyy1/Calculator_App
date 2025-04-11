@@ -14,7 +14,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     public AdvanceCalc() {
         super();
         this.precision = 2;
-        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
+        System.out.println("\u001B[43m\u001B[34mCalculator Precision is " + this.precision + " decimal places.\u001B[0m");
     }
 
     /**
@@ -26,7 +26,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         if (places < 0) places = 0;
         if (places > 10) places = 10;
         this.precision = places;
-        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
+        System.out.println("\u001B[43m\u001B[34mCalculator Precision is " + this.precision + " decimal places.\u001B[0m");
     }
 
     /**
@@ -38,8 +38,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     @Override
     public <N extends Number> void pow(N value) {
         double exp = value.doubleValue();
-        String format = "%,." + precision + "f";
-        System.out.println("^ " + String.format(format, exp));
+        System.out.println("^ \u001B[34m" + String.format("%10." + precision + "f", exp) + "\u001B[0m");
         System.out.println("=============");
         previousValue = currentValue;
         this.currentValue = Math.pow(this.currentValue, exp);
@@ -55,8 +54,8 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
             System.out.println("Error: Cannot calculate square root of a negative number");
             return;
         }
-        String format = "%,." + precision + "f";
-        System.out.println("√ " + String.format(format, this.currentValue));
+
+        System.out.println("√ \u001B[34m" + String.format("%,10." + precision + "f", this.currentValue) + "\u001B[0m");
         System.out.println("=============");
         previousValue = currentValue;
         this.currentValue = Math.sqrt(this.currentValue);
@@ -68,8 +67,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
      */
     @Override
     public void updateDisplay() {
-        String format = "%,." + precision + "f%n";
-        System.out.printf(format, this.currentValue);
+        System.out.println("\u001B[34m" + String.format("%,12." + precision + "f", this.currentValue) + "\u001B[0m");
     }
 
     /**
@@ -77,8 +75,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
      */
     @Override
     public void displayMemoryValue() {
-        String format = "%,." + precision + "f%n";
-        System.out.printf(format, this.currentValue);
+        System.out.println("\u001B[34m" + String.format("%,12." + precision + "f", this.memoryValue) + "\u001B[0m");
     }
 
 

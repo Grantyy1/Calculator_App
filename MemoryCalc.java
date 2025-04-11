@@ -31,7 +31,8 @@ public class MemoryCalc extends Calculator {
      */
     public void memoryClear() {
         this.memoryValue = 0.0;
-        System.out.println("Memory Cleared " + String.format("%.4f", this.memoryValue));
+        System.out.print("\u001B[31mMemory Cleared\u001B[0m");
+        System.out.println(" \u001B[34m" + String.format("%.4f", this.memoryValue) + "\u001B[0m");
     }
 
     /**
@@ -39,7 +40,8 @@ public class MemoryCalc extends Calculator {
      */
     public void memorySubtract() {
         this.memoryValue -= this.currentValue;
-        System.out.println("Memory Subtracted " +  (-this.memoryValue));
+        System.out.print("\u001B[31mMemory Subtract\u001B[0m");
+        System.out.println(" \u001B[34m" + String.format("%10.2f", -this.currentValue) + "\u001B[0m");
     }
 
     /**
@@ -55,6 +57,7 @@ public class MemoryCalc extends Calculator {
      */
     public void memoryAdd() {
         this.memoryValue += this.currentValue;
-        System.out.println("Memory Added " +  this.memoryValue);
+        System.out.print("\u001B[31mMemory Add\u001B[0m");
+        System.out.println(" \u001B[34m" + String.format("%10.2f", this.currentValue) + "\u001B[0m");
     }
 }

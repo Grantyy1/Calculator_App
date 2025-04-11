@@ -17,7 +17,7 @@ public class TestBench {
 
         calc.memoryAdd();
 
-        System.out.println("\t" + calc.currentValue);
+        System.out.println("\u001B[34m" + String.format("%12.2f", calc.currentValue) + "\u001B[0m");
 
         calc.multiply(10.0);
         calc.memorySubtract();
@@ -30,7 +30,7 @@ public class TestBench {
         calc.pow(2.0);
         calc.sqrt();
 
-        System.out.println("Using memory value");
+        System.out.println("\u001B[31mUsing memory value\u001B[0m");
         calc.currentValue = calc.getMemoryValue();
         calc.updateDisplay();
         calc.add(-72.0);

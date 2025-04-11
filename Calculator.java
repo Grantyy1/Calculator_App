@@ -34,7 +34,7 @@ public abstract class Calculator implements BasicMath {
         this.inputValue = 0.0;
         this.currentValue = 0.0;
         this.operator = ' ';
-        System.out.println("Calculator On");
+        System.out.println("\u001B[34mCalculator On\u001B[0m");
     }
 
     /**
@@ -46,14 +46,13 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void add(N value) {
         inputValue = value.doubleValue();
-        System.out.printf("+ %10.2f%n", inputValue);
+        System.out.println("+ \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
         System.out.println("=============");
         currentValue += inputValue;
         previousValue = currentValue - inputValue;
         operator = '+';
         updateDisplay();
     }
-
 
     /**
      * Subtracts a number from the current value.
@@ -63,7 +62,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void subtract(N value) {
         inputValue = value.doubleValue();
-        System.out.printf("- %10.2f%n", inputValue);
+        System.out.println("- \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
         System.out.println("=============");
         currentValue -= inputValue;
         previousValue = currentValue + inputValue;
@@ -79,7 +78,7 @@ public abstract class Calculator implements BasicMath {
     @Override
     public <N extends Number> void multiply(N value) {
         inputValue = value.doubleValue();
-        System.out.printf("* %10.2f%n", inputValue);
+        System.out.println("* \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
         System.out.println("=============");
         previousValue = currentValue;
         currentValue *= inputValue;
@@ -99,7 +98,8 @@ public abstract class Calculator implements BasicMath {
             System.out.println("Error: Division by zero");
             return;
         }
-        System.out.printf("/ %10.2f%n", inputValue);
+
+        System.out.println("/ \u001B[34m" + String.format("%10.2f", inputValue) + "\u001B[0m");
         System.out.println("=============");
         previousValue = currentValue;
         currentValue /= inputValue;
@@ -115,14 +115,14 @@ public abstract class Calculator implements BasicMath {
         this.inputValue = 0.0;
         this.currentValue = 0.0;
         this.operator = ' ';
-        System.out.println("Calculator Cleared");
+        System.out.println("\u001B[34mCalculator Cleared\u001B[0m");
     }
 
     /**
      * Updates the display with the current value on the calculator.
      */
     public void updateDisplay() {
-        System.out.printf("%12.2f%n", this.currentValue);
+        System.out.println("\u001B[34m" + String.format("%12.2f", this.currentValue) + "\u001B[0m");
     }
 }
 
