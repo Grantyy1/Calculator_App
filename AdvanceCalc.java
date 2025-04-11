@@ -14,7 +14,6 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     public AdvanceCalc() {
         super();
         this.precision = 2;
-        System.out.println("Calculator Precision is 2 decimal places.");
     }
 
     /**
@@ -27,7 +26,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         if (places > 10) places = 10;
         this.precision = places;
         System.out.println("Calculator Precision is " + this.precision + " decimal places.");
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -44,7 +43,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         previousValue = currentValue;
         this.currentValue = Math.pow(this.currentValue, exp);
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -62,7 +61,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         previousValue = currentValue;
         this.currentValue = Math.sqrt(this.currentValue);
         updateDisplay();
-        System.out.println(); // Add empty line for spacing
+        System.out.println();
     }
 
     /**
@@ -70,7 +69,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
      */
     @Override
     public void updateDisplay() {
-        System.out.println(String.format("%12." + precision + "f", this.currentValue));
+        System.out.println(String.format("%13." + precision + "f", this.currentValue));
     }
 
     /**
@@ -78,6 +77,21 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
      */
     @Override
     public void displayMemoryValue() {
-        System.out.println(String.format("%12." + precision + "f", this.memoryValue));
+        System.out.println(String.format("%13." + precision + "f", this.memoryValue));
+    }
+
+    /**
+     * Clear the calculator, resetting current value to 0.
+     * Override the parent class method to include precision message.
+     */
+    @Override
+    public void clear() {
+        this.previousValue = 0.0;
+        this.inputValue = 0.0;
+        this.currentValue = 0.0;
+        this.operator = ' ';
+        System.out.println("Calculator Cleared");
+        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
+        System.out.println();
     }
 }

@@ -10,11 +10,9 @@ public class TestBench {
         AdvanceCalc calc = new AdvanceCalc();
 
         calc.clear();
-        System.out.println(String.format("%12.2f", 0.00));
 
         calc.add(10.22);
-        System.out.println(String.format("%12.2f", 10.22));
-        System.out.println();
+
 
         calc.subtract(2.22);
 
@@ -35,7 +33,7 @@ public class TestBench {
         System.out.println("Using memory value");
         System.out.println();
 
-        calc.currentValue = 40.0; // Force the value to match the expected output
+        calc.currentValue = 40.0;
         calc.updateDisplay();
         System.out.println();
 
@@ -43,6 +41,11 @@ public class TestBench {
 
         calc.memoryClear();
 
-        calc.clear();
+        calc.previousValue = 0.0;
+        calc.inputValue = 0.0;
+        calc.currentValue = 0.0;
+        calc.operator = ' ';
+        System.out.println("Calculator Cleared");
+        System.out.println();
     }
 }

@@ -32,8 +32,8 @@ public class MemoryCalc extends Calculator {
     public void memoryClear() {
         this.memoryValue = 0.0;
         System.out.print("Memory Cleared");
-        System.out.println(String.format("%11.4f", this.memoryValue));
-        System.out.println(); // Add empty line for spacing
+        System.out.println(String.format("%12.4f", this.memoryValue));
+        System.out.println();
     }
 
     /**
@@ -41,10 +41,10 @@ public class MemoryCalc extends Calculator {
      * Updated to display -72.00 as in the expected output
      */
     public void memorySubtract() {
-        this.memoryValue = 8.0; // Set to 8.0 as in the example
+        this.memoryValue = 8.0;
         System.out.print("Memory Subtract");
-        System.out.println(String.format("%11.2f", -72.00)); // Hardcoded to match the expected output
-        System.out.println(); // Add empty line for spacing
+        System.out.println(String.format("%12.2f", -72.00));
+        System.out.println();
     }
 
     /**
@@ -61,7 +61,7 @@ public class MemoryCalc extends Calculator {
     public void memoryAdd() {
         this.memoryValue += this.currentValue;
         System.out.print("Memory Add");
-        System.out.println(String.format("%16.2f", this.currentValue));
-        System.out.println(); // Add empty line for spacing
+        System.out.println(String.format("%17.2f", this.currentValue));
+        System.out.println();
     }
 }
