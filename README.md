@@ -17,18 +17,73 @@ This Java application allowes a user to do mathematical calulations. This calcul
 ## Features
 
 ### Calculator Memory:
-      - Users can add new pets to the inventory with their details
+      Stores, adds and subtracts current calculator value in memory. Itc can clear and recall the memory value for              calculations.
 
 ### Basic Mathematics 
-      - Users can remove pets from the inventory
+      - Addition: Adds a number to the current stored value.
+      - Subtraction: Subtracts number from the current stored value.
+      - Multiplication: Multiplies the current stored value by a number.
+      - Division: Divides the current value by a number (with division by zero error handling)
       
 ### Advanced mathematics: 
-      - Simple console menu for navigating application features.
+      - Power exponent: Raises the current stored value to a specified power
+      - Square Root exponent: Calculates the square root of the current value.
       
 ### Precision
-      - The inventory can be saved to and loaded from text file.
+      - Customizable decimal precision between (0-10 decimal places)
+      - It adapts all calculations and display to the specified precision chosen
 
 ## Console Code for the App
+
+      Calculator On 
+      Calculator Cleared
+      Calculator Precision is 2 decimal places. 
+
+               0.00 
+      +       10.22
+      =============
+              10.22
+              
+              10.22
+      -        2.22
+      =============
+               8.00
+               
+      Memory Add                8.00
+      
+             2.0000
+               8.00
+      *       10.00
+      =============
+              80.00
+              
+      Memory Subtract         -72.00
+      
+              80.00
+      /        2.00
+      =============
+              40.00
+              
+      Calculator Precision is 4 decimal places. 
+      
+            40.0000 
+      ^      2.0000
+      =============
+         1,600.0000
+      
+      √ 1,600.0000
+      =============
+            40.0000
+      
+      Using memory value
+            40.0000
+      +    -72.0000
+      =============
+           -32.0000
+  
+      Memory Cleared 0.0000
+
+      Calculator Cleared
 
 **Calculator App**
 
@@ -43,27 +98,36 @@ This Java application allowes a user to do mathematical calulations. This calcul
 ---
 
 ## Project Structure
-Project is divided into 2 interfaced and 4 classes:
+      Project is divided into 2 interfaces and 4 classes:
+      
+# Interfaces:
+BasicMath.java: Defines basic arithmetic operations
+      - add()
+      - subtract()
+      - multiply()
+      - divide()
+AdvanceMath.java: Defines advanced mathematical operations
+      - pow()
+      - sqrt()
 
-## petstore.inventory: Contains classes and enums for pet inventory data
+# Classes:
+Calculator.java: Abstract base class implementing BasicMath
+      - Handles basic operations and display functionality
+      - Maintains current and previous values
+      - Provides clear functionality
 
-Pet.java: Base class for all pets
+MemoryCalc.java: Extends Calculator
+      - Adds memory storage functionality
+      - Methods for memory operations (add, subtract, clear, display)
 
-Fish.java: Class for fish inventory items
+AdvanceCalc.java: Extends MemoryCalc and implements AdvanceMath
+      - Adds advanced mathematical operations
+      - Customizable decimal precision
+      - Enhanced display formatting
 
-Bird.java: Class for bird inventory items
-
-HabitatType.java: Enum for different pet habitats
-
-FeedingSchedule.java: Enum for pet feeding schedules
-
-WaterType.java: Enum specific to fish water requirements
-
-## petstore.app: Contains classes for managing the user's interface
-
-PetStoreApp.java: Main application class with menu and inventory management
-
-Input.java: Utility class for handling user input with validation
+TestBench.java: Main application class
+      - Demonstrates calculator functionality
+      - Tests various operations in sequence
 
 ---
 ## Class Diagram
