@@ -14,7 +14,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     public AdvanceCalc() {
         super();
         this.precision = 2;
-        System.out.println("\u001B[34mCalculator Precision is " + this.precision + " decimal places.\u001B[0m");
+        System.out.println("Calculator Precision is 2 decimal places.");
     }
 
     /**
@@ -26,7 +26,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         if (places < 0) places = 0;
         if (places > 10) places = 10;
         this.precision = places;
-        System.out.println("\u001B[34mCalculator Precision is " + this.precision + " decimal places.\u001B[0m");
+        System.out.println("Calculator Precision is " + this.precision + " decimal places.");
     }
 
     /**
@@ -71,14 +71,10 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     }
 
     /**
-     * Displays teh memory value with the current precision set.
+     * Displays the memory value with the current precision set.
      */
     @Override
     public void displayMemoryValue() {
-        System.out.println("\u001B[34m" + String.format("%,12." + precision + "f", this.memoryValue) + "\u001B[0m");
+        System.out.println(String.format("%,12." + precision + "f", this.memoryValue));
     }
-
-
-
-
 }
