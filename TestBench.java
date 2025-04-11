@@ -17,7 +17,7 @@ public class TestBench {
 
         calc.memoryAdd();
 
-        System.out.println("\u001B[34m" + String.format("%12.2f", calc.currentValue) + "\u001B[0m");
+        System.out.println(String.format("%12.2f", calc.currentValue));
 
         calc.multiply(10.0);
         calc.memorySubtract();

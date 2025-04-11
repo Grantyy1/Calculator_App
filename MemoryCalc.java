@@ -58,6 +58,6 @@ public class MemoryCalc extends Calculator {
     public void memoryAdd() {
         this.memoryValue += this.currentValue;
         System.out.print("\u001B[31mMemory Add\u001B[0m");
-        System.out.println(String.format("%10.2f", this.currentValue));
+        System.out.println(String.format("%15.2f", this.currentValue));
     }
 }

@@ -38,7 +38,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
     @Override
     public <N extends Number> void pow(N value) {
         double exp = value.doubleValue();
-        System.out.println("^ " + String.format("%10." + precision + "f", exp));
+        System.out.println("^ " + String.format("%11." + precision + "f", exp));
         System.out.println("=============");
         previousValue = currentValue;
         this.currentValue = Math.pow(this.currentValue, exp);
@@ -55,7 +55,7 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
             return;
         }
 
-        System.out.println("√ " + String.format("%,10." + precision + "f", this.currentValue));
+        System.out.println("√ " + String.format("%,11." + precision + "f", this.currentValue));
         System.out.println("=============");
         previousValue = currentValue;
         this.currentValue = Math.sqrt(this.currentValue);
