@@ -49,8 +49,8 @@ public abstract class Calculator implements BasicMath {
         inputValue = value.doubleValue();
         System.out.println("+ " + String.format("%11.2f", inputValue).replace('.', ','));
         System.out.println("=============");
+        previousValue = currentValue;
         currentValue += inputValue;
-        previousValue = currentValue - inputValue;
         operator = '+';
         updateDisplay();
     }
@@ -65,8 +65,9 @@ public abstract class Calculator implements BasicMath {
         inputValue = value.doubleValue();
         System.out.println("- " + String.format("%11.2f", inputValue).replace('.', ','));
         System.out.println("=============");
+        System.out.println(" ");
+        previousValue = currentValue;
         currentValue -= inputValue;
-        previousValue = currentValue + inputValue;
         operator = '-';
         updateDisplay();
     }
@@ -81,6 +82,7 @@ public abstract class Calculator implements BasicMath {
         inputValue = value.doubleValue();
         System.out.println("* " + String.format("%11.2f", inputValue));
         System.out.println("=============");
+        System.out.println(" ");
         previousValue = currentValue;
         currentValue *= inputValue;
         operator = '*';
@@ -102,6 +104,7 @@ public abstract class Calculator implements BasicMath {
 
         System.out.println("/ " + String.format("%11.2f", inputValue));
         System.out.println("=============");
+        System.out.println(" ");
         previousValue = currentValue;
         currentValue /= inputValue;
         operator = '/';
