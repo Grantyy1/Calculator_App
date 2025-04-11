@@ -17,7 +17,7 @@ This Java application allowes a user to do mathematical calulations. This calcul
 ## Features
 
 ### Calculator Memory:
-      Stores, adds and subtracts current calculator value in memory. Itc can clear and recall the memory value for              calculations.
+      Stores, adds and subtracts current calculator value in memory. Itc can clear and recall the memory value for calculations.
 
 ### Basic Mathematics 
       - Addition: Adds a number to the current stored value.
