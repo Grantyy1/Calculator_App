@@ -1,4 +1,3 @@
-
 /**
  * Where the code will run and can be tested.
  * @author Grant Peverett
@@ -11,9 +10,11 @@ public class TestBench {
 
         calc.clear();
         System.out.println(String.format("%12.2f", 0.00));
+        System.out.println(); // Add empty line for spacing
 
         calc.add(10.22);
         System.out.println(String.format("%12.2f", 10.22));
+        System.out.println(); // Add empty line for spacing
 
         calc.subtract(2.22);
 
@@ -32,8 +33,11 @@ public class TestBench {
         calc.sqrt();
 
         System.out.println("Using memory value");
+        System.out.println(); // Add empty line for spacing
+
         calc.currentValue = 40.0; // Force the value to match the expected output
         calc.updateDisplay();
+        System.out.println(); // Add empty line for spacing
 
         calc.add(-72.0);
 
