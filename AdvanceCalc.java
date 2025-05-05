@@ -95,3 +95,30 @@ public class AdvanceCalc extends MemoryCalc implements AdvanceMath {
         System.out.println();
     }
 }
+
+/**1. The JRE is required to run Java bytecode.
+   2. ENCAPSULATION is the technique for making fields and methods hidden or visible.
+   3. POLYMORPHISM is the ability to process objects differently depending on their class.
+   4. A WRAPPER class provides common methods for working with a primitive data type.
+   5. An instance of a class is known as an OBJECT.
+   6. A CLASS encapsulates attributes and behaviors for creating objects of the same type.
+   7. The STATIC keyword is used to declare a field that only exists once in memory for like objects.
+   8. A method in a class can also be called a BEHAVIOUR.
+   9. A field in a class can also be called an ATTRIBUTE.
+   10.A member of a class that is automatically called, when an object is instantiated, is known as a CONSTRUCTOR.
+   11 You do not write JavaDoc for VARIABLES.
+   12.NOT true about default constructor: LIKE METHODS, A DEFAULT CONSTRUCTOR MUST DECLARE A RETURN DATA TYPE.
+   13.A setter is also commonly called a MUTATOR.
+   14.A getter is also commonly called an ACCESSOR.
+   15.A PACKAGE is a mechanism to encapsulate a group of classes and interfaces.
+   16.The EXTENDS keyword is used to declare a derived class that inherits fields and methods from a base class.
+   17.Use PRIVATE access modifier if you ONLY want a member to be accessible within itself.
+   18.An ABSTRACT class guides the design of subclasses but cannot itself be instantiated as an object.
+   19.An INTERFACE is an abstract type that is used to declare a behavior that classes must implement.
+   20.The @Override ANNOTATION informs the compiler that the element is meant to override an element declared in a super class
+   21.The OOP OPEN/CLOSED principle implies that a class should be extendable without modifying the class itself.
+   22.The OOP SINGLE RESPONSIBILITY principle implies that a class should only include fields and methods to serve one purpose.
+   23.INHERITANCE is the OOP concept when a class derives from another class.
+   24.A derived class is also called a SUB class.
+   25.A base class is also called a SUPER class.
+
