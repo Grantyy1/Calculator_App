@@ -35,65 +35,78 @@ This Java application allowes a user to do mathematical calulations. This calcul
 
 ## Console Code for the App
 
-      Calculator On 
+      Calculator On
       Calculator Cleared
-      Calculator Precision is 2 decimal places. 
+      Calculator Precision is 2 decimal places.
 
-               0.00 
-      +       10.22
+      +       10,22
       =============
-              10.22
-              
-              10.22
-      -        2.22
+              10,22
+
+      -        2,22
       =============
-               8.00
-               
-      Memory Add                8.00
-      
-             2.0000
-               8.00
-      *       10.00
+               8,00
+
+      Memory Add             8,00
+
+      *       10,00
       =============
-              80.00
-              
-      Memory Subtract         -72.00
-      
-              80.00
-      /        2.00
+              80,00
+
+      Memory Subtract      -72,00
+
+      /        2,00
       =============
-              40.00
-              
-      Calculator Precision is 4 decimal places. 
-      
-            40.0000 
-      ^      2.0000
+              40,00
+
+      Calculator Precision is 4 decimal places.
+
+      ^      2,0000
       =============
-         1,600.0000
-      
-      √ 1,600.0000
+          1600,0000
+
+      √   1600,0000
       =============
-            40.0000
-      
+            40,0000
+
       Using memory value
-            40.0000
-      +    -72.0000
+
+            40,0000
+
+      +      -72,00
       =============
-           -32.0000
-  
-      Memory Cleared 0.0000
+           -32,0000
+
+      Memory Cleared      0,0000
 
       Calculator Cleared
 
-**Calculator App**
 
-├── **Input.java**        # Class representing the Users Input
+**Calculator App Code**
 
-<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java" alt="Input.java"/>
+├── **BasicMath.java**        # BasicMath interface for calculator operations
 
-├── **PetStoreApp**         # Main application to interact with the user
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/BasicMath.java" alt="BasicMath.java"/>
 
-<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/PetStoreApp.java" alt="PetStoreApp"/>
+├── **AdvanceMath.java**         # AdvanceMath interface for advanced calculator operations.
+
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/AdvanceMath.java" alt="AdvanceMath.java"/>
+
+├── **Calculator.java**        # Calculator that implements the BasicMath interface.
+
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/Calculator.java" alt="Calculator.java"/>
+
+├── **AdvanceCalc.java**         # AdvanceCalc class is used to do advanced arithmetic operations on the calculator.
+
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/AdvanceCalc.java" alt="AdvanceCalc"/>
+
+├── **MemoryCalc.java**        # MemoryCalc class extends the Calculator class.
+
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/MemoryCalc.java" alt="MemoryCalc.java"/>
+
+├── **TestBench.java**         # Where the code will run and can be tested.
+
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/TestBench.java" alt="TestBench.java"/>
 
 ---
 
@@ -133,7 +146,7 @@ This Java application allowes a user to do mathematical calulations. This calcul
 ## Class Diagram
       - A UML class diagram is included in this repository.
       
-<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/PetStoreUML.jpg" alt="Profile Picture" /> 
+<img src="https://github.com/Grantyy1/Calculator_App/blob/main/Calculator_App%20UML%20Diagram.jpg" alt="Profile Picture" /> 
       
 --- 
 
